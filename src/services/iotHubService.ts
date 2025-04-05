@@ -38,5 +38,5 @@ export class IotHubService {
           return `Failed to fetch device info. Device doesn't exist or Azure CLI is not authenticated.`;
         }
       }
-    
+  
 }
