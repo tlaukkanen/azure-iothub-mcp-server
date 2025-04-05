@@ -1,0 +1,50 @@
+{
+  "name": "@tlaukkanen/azure-iothub-mcp-server",
+  "version": "0.0.1",
+  "description": "MCP Server for Azure IoT Hub read-only queries",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "azure-iothub-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "docs/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "node dist/index.js",
+    "inspector": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
+    "test": "npm run test:unit && npm run test:int && npm run test:e2e",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlaukkanen/azure-iothub-mcp-server.git"
+  },
+  "keywords": [
+    "mcp",
+    "llm",
+    "azure",
+    "iothub"
+  ],
+  "author": "Tommi Laukkanen (https://github.com/tlaukkanen)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlaukkanen/azure-iothub-mcp-server/issues"
+  },
+  "homepage": "https://github.com/tlaukkanen/azure-iothub-mcp-server#readme",
+  "dependencies": {
+    "@azure/arm-iothub": "^6.3.0",
+    "@azure/identity": "^4.8.0",
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
