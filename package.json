@@ -2,6 +2,7 @@
   "name": "@tlaukkanen/azure-iothub-mcp-server",
   "version": "0.0.1",
   "description": "MCP Server for Azure IoT Hub read-only queries",
+  "type": "commonjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
